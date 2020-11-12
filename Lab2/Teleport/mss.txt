@@ -1,0 +1,5 @@
+serv 10086
+lftp
+C 127.0.0.1 10086
+put D:\software\cc.exe cc.exe
+get D:\software\cc1.exe cc1.exe

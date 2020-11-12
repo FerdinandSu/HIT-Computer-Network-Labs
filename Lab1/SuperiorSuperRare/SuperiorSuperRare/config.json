@@ -1,0 +1,52 @@
+﻿{
+  "EnableAuthentication": true,
+  "Users": [
+    {
+      "UserName": "nsu",
+      "Password": "pwd",
+      "EnableFireWall": true,
+      "EnableRedirection": true,
+      "RedirectionRules": [
+        {
+          "Key": "(?<str>.*?).hts.com",
+          "Value": "${str}.hit.edu.cn"
+        }
+      ],
+      "FireWallRules": [
+        {
+          "IsAllow": false,
+          "Rule": "www.baidu.com"
+        }
+      ]
+    },
+    {
+      "UserName": "su",
+      "Password": "pwd",
+      "EnableFireWall": false,
+      "EnableRedirection": false,
+      "RedirectionRules": [],
+      "FireWallRules": []
+    }
+  ],
+  "RejectHttpProxy": false,
+  "BufferSize": 8192,
+  "ServerInfo": {
+    "Item1": "0.0.0.0",
+    "Item2": 8080
+  },
+  "ConnectionLimit": 1000,
+  "EnableFireWall": false,
+  "EnableRedirection": false,
+  "RedirectionRules": [
+    {
+      "Key": "(?<str>.*?).google.com",
+      "Value": "${str}.baidu.com"
+    }
+  ],
+  "FireWallRules": [
+    {
+      "IsAllow": false,
+      "Rule": "www.baidu.com"
+    }
+  ]
+}

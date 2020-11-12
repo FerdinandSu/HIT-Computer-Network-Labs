@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netcoreapp3.1</TargetFrameworks>
+        <OutputType>Exe</OutputType>
+    <RootNamespace>SuperiorSuperRare</RootNamespace>
+    <PackageId>SuperiorSuperRare</PackageId>
+    <Authors>Ferdinand Sukhoi</Authors>
+    <Version>1.0.0</Version>
+
+    <AssemblyName>ssr</AssemblyName>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="PlasticMetal.MobileSuit" Version="2.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="config.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties config_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
+
+</Project>

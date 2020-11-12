@@ -1,0 +1,12 @@
+{
+  "Parallel": 60,
+  "RefreshRate": 500,
+  "PackageLoss": 0,
+  "Type": 0,
+  "SendRangeLength": 60,
+  "ReceiveRangeLength": 60,
+  "DiagramMaxLength": 60000,
+  "WriteTimeout": -1,
+  "ReadTimeout": -1,
+  "SendTimeout": 10
+}
