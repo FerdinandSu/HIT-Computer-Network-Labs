@@ -3,6 +3,7 @@
 */
 #include "sysInclude.h"
 #include <map>
+
 using namespace std;
 // system support
 extern void fwd_LocalRcv(char *pBuffer, int length);
@@ -117,7 +118,7 @@ private:
 
 /**
  * 路由表
- */ 
+ */
 map<uint, uint> Routes[33];
 
 // implemented by students
@@ -139,8 +140,8 @@ void stud_Route_Init()
  */
 uint mask(uint ipAddr, uint masklen)
 {
-	uint shiftLen=32-masklen;
-	return (ipAddr >>shiftLen) << shiftLen;
+	uint shiftLen = 32 - masklen;
+	return (ipAddr >> shiftLen) << shiftLen;
 }
 /**
  * 判断目标包是否是发往本机的
@@ -150,16 +151,16 @@ uint mask(uint ipAddr, uint masklen)
  */
 bool IsLocal(uint addr)
 {
-    uint localAddr = getIpv4Address();
-    uint dst = ntohl(addr);
-    if (localAddr == dst || dst == ~0u)
-        return true;
-    for (uint i = 1; i != ~0u; i = (i << 1) + 1)
-    {
-        if ((localAddr & i) == dst)
-            return true;
-    }
-    return false;
+	uint localAddr = getIpv4Address();
+	uint dst = ntohl(addr);
+	if (localAddr == dst || dst == ~0u)
+		return true;
+	for (uint i = 1; i != ~0u; i = (i << 1) + 1)
+	{
+		if ((localAddr & i) == dst)
+			return true;
+	}
+	return false;
 }
 /**
  * 在本地路由表中查询目的地址的路由信息
